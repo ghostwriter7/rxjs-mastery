@@ -31,9 +31,12 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/tuicss/dist/tuicss.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/tuicss/dist/tuicss.js"
+            ]
           },
           "configurations": {
             "production": {
