@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { games } from '../environments/games';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +6,5 @@ import { games } from '../environments/games';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  public games = games;
   constructor() {}
 }

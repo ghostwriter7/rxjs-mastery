@@ -1,0 +1,22 @@
+<div class="tui-window m-2 d-block">
+  <fieldset class="tui-fieldset">
+    <legend>Games</legend>
+    Pick a game, will ya'?
+  </fieldset>
+</div>
+
+<div class="tui-divider my-3"></div>
+
+<div
+  *ngFor="let game of games"
+  class="tui-panel m-3">
+  <div class="tui-panel-header white-168 px-2">
+    {{ game.name }}
+  </div>
+  <div class="tui-panel-content purple-168">
+    {{ game.description }}
+    <a
+      [routerLink]="'/' + game.path"
+      class="tui-button d-block mx-auto my-2">Play</a>
+  </div>
+</div>
