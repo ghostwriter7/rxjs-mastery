@@ -1,1 +1,16 @@
-<p>alphabet-invasion works!</p>
+<div class="tui-panel mt-3">
+  <div class="tui-panel-header text-dark px-3">
+    ALPHABET INVASION GAME
+  </div>
+  <div class="tui-panel-content text-center">
+    <span class="opacity-50">Score:</span> {{ score }} | <span class="opacity-50">Level</span> {{ level }}
+    <div *ngIf="isGameOver">GAME OVER!</div>
+  </div>
+</div>
+
+<div class="tui-panel mt-3 w-50 d-flex align-items-center justify-content-between flex-column position-relative"
+     [ngStyle]="{ height: endThreshold * 27 + 'px'}">
+  <div *ngIf="html$ | async as html" [innerHTML]="html"></div>
+  <div class="text-center position-absolute bottom-0">{{ '*'.repeat(gameWidth) }}</div>
+</div>
+k
