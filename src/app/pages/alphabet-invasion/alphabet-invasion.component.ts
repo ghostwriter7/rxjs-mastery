@@ -8,8 +8,7 @@ import {
   scan,
   startWith, Subject,
   switchMap,
-  takeWhile,
-  tap
+  takeWhile
 } from 'rxjs';
 
 interface Letter {
@@ -49,7 +48,6 @@ export class AlphabetInvasionComponent implements OnInit {
   private letterInterval = new BehaviorSubject<number>(600);
 
   private letters$ = this.letterInterval.pipe(
-    tap(console.log),
     switchMap(i => interval(i).pipe(
       scan<number, Letters>((letters) => {
         return {
